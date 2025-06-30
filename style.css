@@ -1,3 +1,146 @@
+.btn {
+  padding: 0.625rem 1.25rem;
+  margin-right: 14px;
+  border: none;
+  border-radius: 5%;
+}
 
+.btn--ghost {
+  background: transparent;
+  color: #4caf4f;
+}
+.btn--ghost:hover {
+  color: #28cb8b;
+}
+
+.btn--solid {
+  background-color: #4caf4f;
+  color: #ffffff;
+}
+.btn--solid:hover {
+  background-color: #28cb8b;
+}
+
+.active {
+  visibility: visible;
+}
+
+.inactive {
+  display: none;
+}
+
+.text-primary {
+  color: #4caf4f;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.75rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+:root {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #18191F;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  height: 5.25rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__logo {
+  width: 155px;
+  height: 100%;
+  cursor: pointer;
+}
+.header__nav {
+  display: flex;
+  gap: 124.5px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  height: 100%;
+}
+.header__list-items {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+}
+.header__link {
+  color: #18191F;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.header__link:hover {
+  color: #28cb8b;
+}
+.header__auth {
+  display: flex;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.hero {
+  display: flex;
+  height: 37.5rem;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  padding: 0 9rem;
+}
+.hero__content {
+  display: flex;
+}
+.hero__slide {
+  gap: 2rem;
+}
+.hero button {
+  height: 52px !important;
+  width: 128px !important;
+}
+.hero p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.hero__dot {
+  display: flex;
+}
 
 /*# sourceMappingURL=style.css.map */

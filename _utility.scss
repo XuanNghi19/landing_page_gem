@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+.btn {
+  padding: 0.625rem 1.25rem;
+  margin-right: 14px;
+  border: none;
+  border-radius: 5%;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #4caf4f;
+
+  &:hover {
+    color: map-get($colors, primary);
+  }
+}
+
+.btn--solid {
+  background-color: #4caf4f;
+  color: map-get($neutral-colors, white);
+
+  &:hover {
+    background-color: map-get($colors, primary);
+  }
+}
+
+.active {
+  visibility: visible;
+}
+
+.inactive {
+  display: none;
+}
+
+.text-primary {
+  color: #4caf4f;
+}
+
+h1 {
+  font-size: map-get($headlines, h1, size);
+  line-height: map-get($headlines, h1, line-height);
+  margin: 0;
+}
+
+h2 {
+  font-size: map-get($headlines, h2, size);
+  line-height: map-get($headlines, h2, line-height);
+  margin: 0;
+}
+
+h3 {
+  font-size: map-get($headlines, h3, size);
+  line-height: map-get($headlines, h3, line-height);
+  margin: 0;
+}
+
+h4 {
+  font-size: map-get($headlines, h4, size);
+  line-height: map-get($headlines, h4, line-height);
+  margin: 0;
+}
+
+

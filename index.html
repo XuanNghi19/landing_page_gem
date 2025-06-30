@@ -3,52 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
   </head>
   <body>
     <header class="header">
       <img class="header__logo" src="assets/Logo.svg" alt="icon" />
       <nav class="header__nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Feature</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Testimonial</a></li>
-          <li><a href="#">FAQ</a></li>
+        <ul class="header__list-items">
+          <li><a class="header__link" href="#">Home</a></li>
+          <li><a class="header__link" href="#">Service</a></li>
+          <li><a class="header__link" href="#">Feature</a></li>
+          <li><a class="header__link" href="#">Product</a></li>
+          <li><a class="header__link" href="#">Testimonial</a></li>
+          <li><a class="header__link" href="#">FAQ</a></li>
         </ul>
         <div class="header__auth">
-          <button class="btn">Login</button>
-          <button class="btn">Sign up</button>
+          <button class="btn btn--ghost">Login</button>
+          <button class="btn btn--solid">Sign up</button>
         </div>
       </nav>
     </header>
 
     <section class="hero">
       <div class="hero__content">
-        <div class="hero__slide--active">
-          <h1>Lessons and insights <br /><span>from 8 years</span></h1>
+        <div class="hero__slide active">
+          <h1>Lessons and insights <br /><span class="text-primary">from 8 years</span></h1>
           <p>
             Where to grow your business as a photographer: site or social media?
           </p>
-          <button class="hero__btn">Register</button>
+          <button class="btn btn--solid">Register</button>
         </div>
+
         <div class="hero__slide inactive">
           <h1>Grow your audience <br /><span>with confidence</span></h1>
           <p>Boost your engagement with the right strategies.</p>
-          <button class="btn">Start Now</button>
+          <button class="btn btn--solid">Start Now</button>
         </div>
         <div class="hero__slide inactive">
           <h1>Level up your brand <br /><span>like a pro</span></h1>
           <p>Build trust and recognition with proven tactics.</p>
-          <button class="btn">Get Started</button>
+          <button class="btn btn--solid">Get Started</button>
         </div>
       </div>
 
       <div class="hero__dots">
-        <span class="hero__dot active"></span>
-        <span class="hero__dot inactive"></span>
-        <span class="hero__dot inactive"></span>
+        <span class="hero__dot dot--active"></span>
+        <span class="hero__dot dot--inactive"></span>
+        <span class="hero__dot dot--inactive"></span>
       </div>
       <div class="hero__img">
         <img src="assets/Illustration.svg" alt="hero image" />

@@ -1,0 +1,55 @@
+$neutral-colors: (
+  silver: #f5f7fa,
+  white: #ffffff,
+  grey-blue: #abbed1,
+  l-grey: #89939e,
+  grey: #717171,
+  d-grey: #4d4d4d,
+  black: #263238,
+);
+
+$colors: (
+  primary: #28cb8b,
+  secondary: #263238,
+  info: #2194f3,
+);
+
+$color-shade: (
+  shade1: #43a046,
+  shade2: #388E3B,
+  shade3: #237D31,  
+  shade4: #1B5E1F,
+  shade5: #103E13,
+);
+
+$color-tint: (
+  tint1: #66BB69,
+  tint2: #81C784,
+  tint3: #A5D6A7,
+  tint4: #C8E6C9,
+  tint5: #E8F5E9,
+);
+
+$color-action: (
+  warning: #FBC02D,
+  error: #E53835,
+  success: #2E7D31,
+);
+
+$text-colors: (
+  black: #18191F,
+);
+
+$headlines: (
+  h1: (size: 4rem, line-height: 4.75rem),
+  h2: (size: 2.25rem, line-height: 2.75rem),
+  h3: (size: 1.75rem, line-height: 2.25rem),
+  h4: (size: 1.25rem, line-height: 1.75rem),
+);
+
+$body: (
+  body1: (size: 1.125rem, line-height: 1.75rem),
+  body2: (size: 1rem, line-height: 1.5rem),
+  body3: (size: 0.875rem, line-height: 1.25rem),
+  body4: (size: 0.75rem, line-height: 1rem),
+);

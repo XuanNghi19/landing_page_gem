@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Landing Page</title>
   </head>
   <body>
@@ -28,7 +32,11 @@
     <section class="hero">
       <div class="hero__content">
         <div class="hero__slide active">
-          <h1>Lessons and insights <br /><span class="text-primary">from 8 years</span></h1>
+          <h1>
+            Lessons and insights <br /><span class="text-primary"
+              >from 8 years</span
+            >
+          </h1>
           <p>
             Where to grow your business as a photographer: site or social media?
           </p>
@@ -46,20 +54,19 @@
           <button class="btn btn--solid">Get Started</button>
         </div>
       </div>
-
-      <div class="hero__dots">
-        <span class="hero__dot dot--active"></span>
-        <span class="hero__dot dot--inactive"></span>
-        <span class="hero__dot dot--inactive"></span>
-      </div>
       <div class="hero__img">
         <img src="assets/Illustration.svg" alt="hero image" />
+      </div>
+      <div class="hero__dots">
+        <span class="hero__dot--active"></span>
+        <span class="hero__dot--inactive"></span>
+        <span class="hero__dot--inactive"></span>
       </div>
     </section>
 
     <main>
       <section class="clients">
-        <div>
+        <div class="clients__intro">
           <h2>Our Clients</h2>
           <p>We have been working with some Fortune 500+ clients</p>
         </div>
@@ -80,7 +87,11 @@
         </div>
         <div class="community__groups">
           <div class="community__group">
-            <img src="assets/Icon (1).svg" alt="group1" />
+            <img
+              class="community__icon"
+              src="assets/Icon (1).svg"
+              alt="group1"
+            />
             <h3>Membership Organisations</h3>
             <p>
               Our membership management software provides full automation of
@@ -88,7 +99,11 @@
             </p>
           </div>
           <div class="community__group">
-            <img src="assets/Icon (2).svg" alt="group2" />
+            <img
+              class="community__icon"
+              src="assets/Icon (2).svg"
+              alt="group2"
+            />
             <h3>National Associations</h3>
             <p>
               Our membership management software provides full automation of
@@ -96,7 +111,11 @@
             </p>
           </div>
           <div class="community__group">
-            <img src="assets/Icon (3).svg" alt="group3" />
+            <img
+              class="community__icon"
+              src="assets/Icon (3).svg"
+              alt="group3"
+            />
             <h3>Clubs And Groups</h3>
             <p>
               Our membership management software provides full automation of
@@ -107,7 +126,11 @@
       </section>
 
       <section class="unlock">
-        <img src="assets/unlock_img.svg" alt="unlock img" />
+        <img
+          class="unlock__image"
+          src="assets/unlock_img.svg"
+          alt="unlock img"
+        />
         <div class="unlock__content">
           <h2>The unseen of spending three years at Pixelgrade</h2>
           <p>
@@ -118,53 +141,61 @@
             Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
             elementum pulvinar odio.
           </p>
-          <button class="unlock__btn">Learn More</button>
+          <button class="btn btn--solid unlock__btn">Learn More</button>
         </div>
       </section>
 
       <section class="achievements">
         <div class="achievements__heading">
-          <h2>Helping a local<br /><span>business reinvent itself</span></h2>
+          <h2>
+            Helping a local<br /><span class="text-primary"
+              >business reinvent itself</span
+            >
+          </h2>
           <p>We reached here with our hard work and dedication</p>
         </div>
         <div class="achievements__counts">
-          <div class="achievements__row">
-            <div class="achievements__element">
-              <img src="assets/achievement1.svg" alt="achievement1" />
-              <div class="achievements__info">
-                <h3>2,245,341</h3>
-                <p>Members</p>
-              </div>
-            </div>
-            <div class="achievements__element">
-              <img src="assets/achievement2.svg" alt="achievement2" />
-              <div class="achievements__info">
-                <h3>46,328</h3>
-                <p>Clubs</p>
-              </div>
-            </div>
+          <div class="achievements__element">
+            <img
+              class="achievements__item1"
+              src="assets/achievement1.svg"
+              alt="achievement1"
+            />
+            <h3>2,245,341</h3>
+            <p>Members</p>
           </div>
-          <div class="achievements__row">
-            <div class="achievements__element">
-              <img src="assets/achievement3.svg" alt="achievement3" />
-              <div class="achievements__info">
-                <h3>828,867</h3>
-                <p>Event Bookings</p>
-              </div>
-            </div>
-            <div class="achievements__element">
-              <img src="assets/achievement4.svg" alt="achievement4" />
-              <div class="achievements__info">
-                <h3>1,926,436</h3>
-                <p>Payments</p>
-              </div>
-            </div>
+          <div class="achievements__element">
+            <img
+              class="achievements__item1"
+              src="assets/achievement2.svg"
+              alt="achievement2"
+            />
+            <h3>46,328</h3>
+            <p>Clubs</p>
+          </div>
+          <div class="achievements__element">
+            <img
+              class="achievements__item1"
+              src="assets/achievement3.svg"
+              alt="achievement3"
+            />
+            <h3>828,867</h3>
+            <p>Event Bookings</p>
+          </div>
+          <div class="achievements__element">
+            <img
+              class="achievements__item1"
+              src="assets/achievement4.svg"
+              alt="achievement4"
+            />
+            <h3>1,926,436</h3>
+            <p>Payments</p>
           </div>
         </div>
       </section>
 
       <section class="calendar">
-        <img src="assets/pana.svg" alt="pana" />
+        <img class="calendar__image" src="assets/pana.svg" alt="pana" />
         <div class="calendar__content">
           <h2>How to design your site footer like we did</h2>
           <p>
@@ -178,12 +209,16 @@
             hendrerit venenatis libero. Donec consectetur faucibus ipsum id
             gravida.
           </p>
-          <button class="calendar__btn">Learn More</button>
+          <button class="btn btn--solid calendar__btn">Learn More</button>
         </div>
       </section>
 
       <section class="customers">
-        <img src="assets/customer.svg" alt="customer" />
+        <img
+          class="customers__image"
+          src="assets/customer.jpg"
+          alt="customer"
+        />
         <div class="customers__content">
           <p>
             Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
@@ -197,11 +232,10 @@
             Quisque vulputate odio neque, eget efficitur libero condimentum id.
             Curabitur id nibh id sem dignissim finibus ac sit amet magna.
           </p>
-          <h4>
+          <h4 class="text-primary">
             Tim Smith<br />
             <span>British Dragon Boat Racing Association</span>
           </h4>
-          <button class="customers">Learn More</button>
           <div class="customers__footer">
             <div class="customers__logos">
               <img src="assets/Logo (7).svg" alt="clients1" />
@@ -211,10 +245,10 @@
               <img src="assets/Logo (5).svg" alt="clients5" />
               <img src="assets/Logo (6).svg" alt="clients6" />
             </div>
-            <button class="customers_navigate">
-              <span>Meet all customers</span>
+            <div class="customers__navigate">
+              <h4 class="text-primary">Meet all customers</h4>
               <img src="assets/Right.svg" alt="right" />
-            </button>
+            </div>
           </div>
         </div>
       </section>
@@ -232,32 +266,32 @@
         <div class="community-updates__nav">
           <div class="community-updates__element">
             <img src="assets/community_update_1.svg" alt="community_update_1" />
-            <div>
-              <h4>Creating Streamlined Safeguarding Processes with OneRen</h4>
-              <button>
-                <span>Readmore</span><img src="assets/Right.svg" alt="Right" />
-              </button>
+            <div class="community-updates__card">
+              <h4>What are your safeguarding responsibilities and how can you manage them?</h4>
+              <div class="community-updates__navigate">
+                <h4>Readmore</h4>
+                <img src="assets/Right.svg" alt="Right" />
+              </div>
             </div>
           </div>
           <div class="community-updates__element">
-            <img src="assets/community_update_2.svg" alt="community_update_2" />
-            <div>
-              <h4>
-                What are your safeguarding responsibilities and how can you
-                manage them?
-              </h4>
-              <button>
-                <span>Readmore</span><img src="assets/Right.svg" alt="Right" />
-              </button>
-            </div>
-          </div>
-          <div class="community-updates__element">
-            <img src="assets/community_update_3.svg" alt="community_update_3" />
-            <div>
+            <img src="assets/community_update_2.svg" alt="community_update_1" />
+            <div class="community-updates__card">
               <h4>Revamping the Membership Model with Triathlon Australia</h4>
-              <button>
-                <span>Readmore</span><img src="assets/Right.svg" alt="Right" />
-              </button>
+              <div class="community-updates__navigate">
+                <h4>Readmore</h4>
+                <img src="assets/Right.svg" alt="Right" />
+              </div>
+            </div>
+          </div>
+          <div class="community-updates__element">
+            <img src="assets/community_update_3.svg" alt="community_update_1" />
+            <div class="community-updates__card">
+              <h4>Creating Streamlined Safeguarding Processes with OneRen</h4>
+              <div class="community-updates__navigate">
+                <h4>Readmore</h4>
+                <img src="assets/Right.svg" alt="Right" />
+              </div>
             </div>
           </div>
         </div>
@@ -317,8 +351,13 @@
           </div>
           <div class="footer__nav-column">
             <h4>Stay up to date</h4>
-            <input type="email" name="" id="footer-email" placeholder="Your email address" />
-            <img src="assets/send.svg" alt="send">
+            <input
+              type="email"
+              name=""
+              id="footer-email"
+              placeholder="Your email address"
+            />
+            <img src="assets/send.svg" alt="send" />
           </div>
         </div>
       </section>

@@ -38,6 +38,29 @@
   color: #4caf4f;
 }
 
+.bg-white {
+  isolation: isolate;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-color: map-get($neutral-colors, white);
+  width: 100vw;
+  height: 100%;
+}
+
+.bg-silver {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-color: map-get($neutral-colors, silver);
+  width: 100vw;
+  height: 100%;
+}
+
 @mixin grid-item-cl($start: 1, $end: 3) {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -73,5 +96,5 @@ h4 {
 }
 
 p {
-  margin: 0;  
+  margin: 0;
 }

@@ -34,6 +34,29 @@
   color: #4caf4f;
 }
 
+.bg-white {
+  isolation: isolate;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100%;
+}
+
+.bg-silver {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-color: #f5f7fa;
+  width: 100vw;
+  height: 100%;
+}
+
 h1 {
   font-size: 4rem;
   line-height: 4.75rem;
@@ -177,16 +200,6 @@ main {
   height: max-content;
   flex-direction: column;
 }
-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(-1 * (100vw - 1440px) / 2);
-  width: 100vw;
-  height: 100%;
-  background-color: white;
-  z-index: -1;
-}
 
 .clients {
   display: flex;
@@ -306,16 +319,6 @@ main::before {
   align-items: center;
   height: 288px;
 }
-.achievements::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(-1 * (100vw - 1440px) / 2);
-  width: 100vw;
-  height: 100%;
-  background-color: #f5f7fa;
-  z-index: -1;
-}
 .achievements__heading {
   width: max-content;
   margin-right: 72px;
@@ -393,16 +396,6 @@ main::before {
   justify-content: center;
   align-items: center;
   height: 390px;
-}
-.customers::before {
-  content: "";
-  background-color: #f5f7fa;
-  position: absolute;
-  width: 100vw;
-  left: calc(-1 * (100vw - 1440px) / 2);
-  top: 0;
-  z-index: -1;
-  height: 100%;
 }
 .customers__image {
   width: 326px;

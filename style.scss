@@ -16,7 +16,7 @@
 }
 
 body {
-  max-width: 1440px;
+  max-width: 90rem;
   margin: 0;
 }
 
@@ -69,6 +69,7 @@ body {
 }
 
 .hero {
+  isolation: isolate;
   display: flex;
   position: relative;
   height: 37.5rem;
@@ -79,25 +80,47 @@ body {
 
   &__content {
     display: flex;
-    margin-right: 104px;
+    position: relative;
   }
 
   &__slide {
-    gap: 2rem;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.6s ease-in-out;
 
-    h1 {
-      color: map-get($neutral-colors, d-grey);
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+      position: relative;
+    }
+
+    &.inactive {
+      opacity: 0;
+      transform: translateX(100%);
+      pointer-events: none;
     }
   }
 
-  button {
-    height: 52px !important;
-    width: 128px !important;
-  }
+  &__text {
+    margin-right: 104px;
+    width: 657px;
+    h1 {
+      color: map-get($neutral-colors, d-grey);
+    }
 
-  p {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    button {
+      height: 52px !important;
+      width: 128px !important;
+    }
+
+    p {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__dots {

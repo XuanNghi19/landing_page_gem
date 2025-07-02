@@ -1,5 +1,5 @@
-@import "./variables.scss";
-@import "./utility.scss";
+@import "./variables";
+@import "./utilities";
 
 :root {
   font-size: 16px;
@@ -16,6 +16,7 @@
 }
 
 body {
+  min-width: 375px;
   max-width: 90rem;
   margin: 0;
 }
@@ -26,10 +27,19 @@ body {
   justify-content: space-around;
   align-items: center;
 
+  @media (max-width: 1024px) {
+    justify-content: space-evenly;
+  }
+
   &__logo {
     width: 155px;
     height: 100%;
     cursor: pointer;
+
+    @media (max-width: 1024px) {
+      width: 110px;
+      margin-left: 20px;
+    }
   }
 
   &__nav {
@@ -39,6 +49,10 @@ body {
     line-height: map-get($body, body2, line-height);
     text-decoration: none;
     height: 100%;
+
+    @media (max-width: 1024px) {
+      gap: 88px;
+    }
   }
 
   &__list-items {
@@ -48,6 +62,10 @@ body {
     gap: 50px;
     list-style: none;
     padding: 0;
+
+    @media (max-width: 1024px) {
+      gap: 35px;
+    }
   }
 
   &__link {
@@ -118,6 +136,9 @@ body {
     }
 
     p {
+      color: map-get($neutral-colors, grey);
+      size: map-get($body, body2, size);
+      line-height: map-get($body, body2, line-height);
       margin-top: 1rem;
       margin-bottom: 2rem;
     }
@@ -185,6 +206,10 @@ main {
     display: flex;
     align-items: center;
     gap: 136px;
+
+    @media (max-width: 1024px) {
+      gap: 96px;
+    }
   }
 }
 
@@ -216,6 +241,10 @@ main {
     margin-top: 16px;
     display: flex;
     gap: 127.5px;
+
+    @media (max-width: 1024px) {
+      gap: 90px;
+    }
   }
 
   &__group {
@@ -226,6 +255,11 @@ main {
     padding: 24px 16px;
     border-radius: 5%;
     box-shadow: 0 2px 8px #abbed133;
+
+    @media (max-width: 1024px) {
+      max-width: 210px;
+    }
+
     h3 {
       margin-top: 16px;
       color: map-get($neutral-colors, d-grey);
@@ -238,6 +272,10 @@ main {
       font-size: map-get($body, body3, size);
       line-height: map-get($body, body3, line-height);
       color: map-get($neutral-colors, grey);
+
+      @media (max-width: 1024px) {
+        max-width: 182px;
+      }
     }
   }
 
@@ -256,6 +294,10 @@ main {
 
   &__image {
     margin-right: 47px;
+
+    @media (max-width: 1024px) {
+      max-width: 310px;
+    }
   }
 
   &__content {
@@ -291,8 +333,17 @@ main {
     width: max-content;
     margin-right: 72px;
 
+    @media (max-width: 1024px) {
+      margin-right: 51px;
+      max-width: 480px;
+    }
+
     h2 {
       color: map-get($neutral-colors, d-grey);
+
+      @media (max-width: 1024px) {
+        margin-right: 51px;
+      }
     }
 
     p {
@@ -309,6 +360,10 @@ main {
     grid-template-rows: repeat(2, 1fr);
     row-gap: 40px;
     column-gap: 30px;
+
+    @media (max-width: 1024px) {
+      column-gap: 21px;
+    }
   }
 
   &__element {
@@ -320,17 +375,30 @@ main {
 
     h3 {
       color: map-get($neutral-colors, d-grey);
+      @media (max-width: 1024px) {
+        font-size: map-get($headlines, h4, size);
+        line-height: map-get($headlines, h4, line-height);
+      }
     }
 
     p {
       font-size: map-get($body, body2, size);
       line-height: map-get($body, body2, line-height);
       color: map-get($neutral-colors, grey);
+
+      @media (max-width: 1024px) {
+        font-size: map-get($body, body3, size);
+        line-height: map-get($body, body3, line-height);
+      }
     }
   }
 
   &__item1 {
     @include grid-item-rw();
+
+    @media (max-width: 1024px) {
+      max-width: 34px;
+    }
   }
 }
 
@@ -343,6 +411,9 @@ main {
 
   &__image {
     margin-right: 50px;
+    @media (max-width: 1024px) {
+      max-width: 310px;
+    }
   }
 
   &__content {
@@ -396,6 +467,12 @@ main {
       font-size: map-get($body, body2, size);
       line-height: map-get($body, body2, line-height);
       color: map-get($neutral-colors, grey);
+
+      @media (max-width: 1024px) {
+        max-width: 524px;
+        font-size: map-get($body, body3, size);
+        line-height: map-get($body, body3, line-height);
+      }
     }
 
     span {
@@ -414,8 +491,15 @@ main {
 
   &__logos {
     display: flex;
-    gap: 41px;
+    gap: 29px;
     margin-right: 32px;
+
+    @media (max-width: 1024px) {
+      gap: 21px;
+      img {
+        width: 34px;
+      }
+    }
   }
 
   &__navigate {
@@ -439,6 +523,10 @@ main {
   align-items: center;
   height: 506px;
 
+  @media (max-width: 1024px) {
+    height: 912px;
+  }
+
   &__intro {
     text-align: center;
     h2 {
@@ -457,8 +545,16 @@ main {
 
   &__nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-top: 16px;
     gap: 24px;
+
+    @media (max-width: 1024px) {
+      row-gap: 126px;
+      column-gap: 36px;
+    }
   }
 
   &__element {
@@ -543,6 +639,10 @@ main {
     gap: 40px;
     width: 350px;
     margin-right: 125px;
+
+    @media (max-width: 1024px) {
+      margin-right: 0;
+    }
   }
 
   &__copyright {
@@ -583,6 +683,10 @@ main {
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @media (max-width: 1024px) {
+      gap: 21px;
+    }
   }
 
   &__nav-column {
@@ -612,13 +716,21 @@ main {
   }
 
   &__input {
+    background-color: #3c464c;
     margin-top: 24px;
     display: flex;
+    gap: 10px;
+    align-items: center;
     position: relative;
     border-radius: 5px;
     width: 255px;
     height: 40px;
+    padding-right: 8px;
+    @media (max-width: 1024px) {
+      width: 158px;
+    }
     input {
+      color: white;
       border-radius: 5px;
       padding: 8px;
       width: 100%;
@@ -633,9 +745,8 @@ main {
   }
 
   &__send {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 8px;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

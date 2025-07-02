@@ -100,6 +100,11 @@ p {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   font-size: 16px;
   padding: 0;
@@ -115,6 +120,7 @@ p {
 }
 
 body {
+  min-width: 375px;
   max-width: 90rem;
   margin: 0;
 }
@@ -125,10 +131,21 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .header {
+    justify-content: space-evenly;
+  }
+}
 .header__logo {
   width: 155px;
   height: 100%;
   cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .header__logo {
+    width: 110px;
+    margin-left: 20px;
+  }
 }
 .header__nav {
   display: flex;
@@ -138,6 +155,11 @@ body {
   text-decoration: none;
   height: 100%;
 }
+@media (max-width: 1024px) {
+  .header__nav {
+    gap: 88px;
+  }
+}
 .header__list-items {
   margin: 0;
   display: flex;
@@ -145,6 +167,11 @@ body {
   gap: 50px;
   list-style: none;
   padding: 0;
+}
+@media (max-width: 1024px) {
+  .header__list-items {
+    gap: 35px;
+  }
 }
 .header__link {
   color: #18191F;
@@ -206,6 +233,9 @@ body {
   width: 128px !important;
 }
 .hero__text p {
+  color: #717171;
+  size: 1rem;
+  line-height: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -266,6 +296,11 @@ main {
   align-items: center;
   gap: 136px;
 }
+@media (max-width: 1024px) {
+  .clients__icons {
+    gap: 96px;
+  }
+}
 
 .community {
   display: flex;
@@ -293,6 +328,11 @@ main {
   display: flex;
   gap: 127.5px;
 }
+@media (max-width: 1024px) {
+  .community__groups {
+    gap: 90px;
+  }
+}
 .community__group {
   display: flex;
   flex-direction: column;
@@ -301,6 +341,11 @@ main {
   padding: 24px 16px;
   border-radius: 5%;
   box-shadow: 0 2px 8px rgba(171, 190, 209, 0.2);
+}
+@media (max-width: 1024px) {
+  .community__group {
+    max-width: 210px;
+  }
 }
 .community__group h3 {
   margin-top: 16px;
@@ -313,6 +358,11 @@ main {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #717171;
+}
+@media (max-width: 1024px) {
+  .community__group p {
+    max-width: 182px;
+  }
 }
 .community__icon {
   margin: 0;
@@ -328,6 +378,11 @@ main {
 }
 .unlock__image {
   margin-right: 47px;
+}
+@media (max-width: 1024px) {
+  .unlock__image {
+    max-width: 310px;
+  }
 }
 .unlock__content {
   display: flex;
@@ -360,8 +415,19 @@ main {
   width: max-content;
   margin-right: 72px;
 }
+@media (max-width: 1024px) {
+  .achievements__heading {
+    margin-right: 51px;
+    max-width: 480px;
+  }
+}
 .achievements__heading h2 {
   color: #4d4d4d;
+}
+@media (max-width: 1024px) {
+  .achievements__heading h2 {
+    margin-right: 51px;
+  }
 }
 .achievements__heading p {
   width: 540px;
@@ -376,6 +442,11 @@ main {
   row-gap: 40px;
   column-gap: 30px;
 }
+@media (max-width: 1024px) {
+  .achievements__counts {
+    column-gap: 21px;
+  }
+}
 .achievements__element {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -386,14 +457,31 @@ main {
 .achievements__element h3 {
   color: #4d4d4d;
 }
+@media (max-width: 1024px) {
+  .achievements__element h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
 .achievements__element p {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #717171;
 }
+@media (max-width: 1024px) {
+  .achievements__element p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
 .achievements__item1 {
   grid-row-start: 1;
   grid-row-end: 3;
+}
+@media (max-width: 1024px) {
+  .achievements__item1 {
+    max-width: 34px;
+  }
 }
 
 .calendar {
@@ -405,6 +493,11 @@ main {
 }
 .calendar__image {
   margin-right: 50px;
+}
+@media (max-width: 1024px) {
+  .calendar__image {
+    max-width: 310px;
+  }
 }
 .calendar__content {
   display: flex;
@@ -453,6 +546,13 @@ main {
   line-height: 1.5rem;
   color: #717171;
 }
+@media (max-width: 1024px) {
+  .customers__content p {
+    max-width: 524px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
 .customers__content span {
   font-weight: 400;
   font-size: 1rem;
@@ -466,8 +566,16 @@ main {
 }
 .customers__logos {
   display: flex;
-  gap: 41px;
+  gap: 29px;
   margin-right: 32px;
+}
+@media (max-width: 1024px) {
+  .customers__logos {
+    gap: 21px;
+  }
+  .customers__logos img {
+    width: 34px;
+  }
 }
 .customers__navigate {
   display: flex;
@@ -489,6 +597,11 @@ main {
   align-items: center;
   height: 506px;
 }
+@media (max-width: 1024px) {
+  .community-updates {
+    height: 912px;
+  }
+}
 .community-updates__intro {
   text-align: center;
 }
@@ -505,8 +618,17 @@ main {
 }
 .community-updates__nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 16px;
   gap: 24px;
+}
+@media (max-width: 1024px) {
+  .community-updates__nav {
+    row-gap: 126px;
+    column-gap: 36px;
+  }
 }
 .community-updates__element {
   position: relative;
@@ -581,6 +703,11 @@ main {
   width: 350px;
   margin-right: 125px;
 }
+@media (max-width: 1024px) {
+  .footer__info {
+    margin-right: 0;
+  }
+}
 .footer__copyright {
   display: flex;
   flex-direction: column;
@@ -614,6 +741,11 @@ main {
   align-items: center;
   gap: 30px;
 }
+@media (max-width: 1024px) {
+  .footer__nav {
+    gap: 21px;
+  }
+}
 .footer__nav-column {
   width: 160px;
   height: 200px;
@@ -638,14 +770,24 @@ main {
   line-height: 1.25rem;
 }
 .footer__input {
+  background-color: #3c464c;
   margin-top: 24px;
   display: flex;
+  gap: 10px;
+  align-items: center;
   position: relative;
   border-radius: 5px;
   width: 255px;
   height: 40px;
+  padding-right: 8px;
+}
+@media (max-width: 1024px) {
+  .footer__input {
+    width: 158px;
+  }
 }
 .footer__input input {
+  color: white;
   border-radius: 5px;
   padding: 8px;
   width: 100%;
@@ -656,11 +798,8 @@ main {
 .footer__input input::placeholder {
   color: white;
 }
-.footer__send {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 8px;
+.footer__send:hover {
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */

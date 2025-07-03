@@ -13,12 +13,125 @@
   font-family: "Inter", sans-serif;
   color: map-get($text-colors, black);
   overflow-x: hidden;
+
+  @media (max-width: map-get($breakpoints, lg)) {
+    font-size: 12px;
+  }
 }
 
 body {
   min-width: 375px;
   max-width: 90rem;
   margin: 0;
+
+  @media (max-width: 820px) {
+    max-width: 820px;
+  }
+}
+
+.menu {
+  position: relative;
+  width: 100%;
+  display: none;
+  height: 5.25rem;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  @media (max-width: map-get($breakpoints, lg)) {
+    display: flex;
+    position: relative;
+    &__logo {
+      width: 155px;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    &__nav {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      padding: 0;
+      background-color: #486d8b;
+      width: 100%;
+      height: 100vh;
+      z-index: 999;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &__opens {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: 30px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &__exits {
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      right: 30px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &__close {
+      transform: translate(-100%);
+    }
+
+    &__open {
+      transform: translate(0);
+    }
+
+    &__list-items {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      margin-top: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+
+      li {
+        width: 100%;
+        padding: 16px;
+        padding-left: 48px;
+        box-sizing: border-box;
+        &:hover {
+          background-color: #7292ac;
+        }
+      }
+    }
+
+    &__link {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    &__auth {
+      margin-top: 30px;
+      display: flex;
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    &__btn {
+      font-size: large;
+    }
+  }
 }
 
 .header {
@@ -27,8 +140,12 @@ body {
   justify-content: space-around;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: map-get($breakpoints, xl)) {
     justify-content: space-evenly;
+  }
+
+  @media (max-width: map-get($breakpoints, lg)) {
+    display: none;
   }
 
   &__logo {
@@ -36,7 +153,7 @@ body {
     height: 100%;
     cursor: pointer;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       width: 110px;
       margin-left: 20px;
     }
@@ -47,10 +164,9 @@ body {
     gap: 124.5px;
     font-size: map-get($body, body2, size);
     line-height: map-get($body, body2, line-height);
-    text-decoration: none;
     height: 100%;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       gap: 88px;
     }
   }
@@ -63,7 +179,7 @@ body {
     list-style: none;
     padding: 0;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       gap: 35px;
     }
   }
@@ -96,6 +212,10 @@ body {
   justify-content: space-between;
   padding: 0 9rem;
 
+  @media (max-width: map-get($breakpoints, lg)) {
+    padding: 0 5rem;
+  }
+
   &__content {
     display: flex;
     position: relative;
@@ -126,6 +246,12 @@ body {
   &__text {
     margin-right: 104px;
     width: 657px;
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      margin-right: 73px;
+      width: 460px;
+    }
+
     h1 {
       color: map-get($neutral-colors, d-grey);
     }
@@ -207,8 +333,12 @@ main {
     align-items: center;
     gap: 136px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       gap: 96px;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      gap: 78px;
     }
   }
 }
@@ -240,10 +370,16 @@ main {
   &__groups {
     margin-top: 16px;
     display: flex;
+    justify-content: center;
     gap: 127.5px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       gap: 90px;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      gap: 16px;
+      flex-wrap: wrap;
     }
   }
 
@@ -256,7 +392,7 @@ main {
     border-radius: 5%;
     box-shadow: 0 2px 8px #abbed133;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       max-width: 210px;
     }
 
@@ -273,7 +409,7 @@ main {
       line-height: map-get($body, body3, line-height);
       color: map-get($neutral-colors, grey);
 
-      @media (max-width: 1024px) {
+      @media (max-width: map-get($breakpoints, xl)) {
         max-width: 182px;
       }
     }
@@ -292,11 +428,19 @@ main {
   justify-content: center;
   margin-top: 42px;
 
+  @media (max-width: map-get($breakpoints, lg)) {
+    margin-top: 0;
+  }
+
   &__image {
     margin-right: 47px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       max-width: 310px;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      max-width: 290px;
     }
   }
 
@@ -304,6 +448,11 @@ main {
     display: flex;
     flex-direction: column;
     width: 601px;
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      max-width: 420px;
+    }
+
     h2 {
       color: map-get($neutral-colors, d-grey);
     }
@@ -333,15 +482,20 @@ main {
     width: max-content;
     margin-right: 72px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       margin-right: 51px;
       max-width: 480px;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      margin-right: 0;
+      max-width: 380px;
     }
 
     h2 {
       color: map-get($neutral-colors, d-grey);
 
-      @media (max-width: 1024px) {
+      @media (max-width: map-get($breakpoints, xl)) {
         margin-right: 51px;
       }
     }
@@ -361,8 +515,12 @@ main {
     row-gap: 40px;
     column-gap: 30px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       column-gap: 21px;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      column-gap: 0;
     }
   }
 
@@ -375,7 +533,7 @@ main {
 
     h3 {
       color: map-get($neutral-colors, d-grey);
-      @media (max-width: 1024px) {
+      @media (max-width: map-get($breakpoints, xl)) {
         font-size: map-get($headlines, h4, size);
         line-height: map-get($headlines, h4, line-height);
       }
@@ -386,7 +544,7 @@ main {
       line-height: map-get($body, body2, line-height);
       color: map-get($neutral-colors, grey);
 
-      @media (max-width: 1024px) {
+      @media (max-width: map-get($breakpoints, xl)) {
         font-size: map-get($body, body3, size);
         line-height: map-get($body, body3, line-height);
       }
@@ -396,7 +554,7 @@ main {
   &__item1 {
     @include grid-item-rw();
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       max-width: 34px;
     }
   }
@@ -411,8 +569,12 @@ main {
 
   &__image {
     margin-right: 50px;
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       max-width: 310px;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      max-width: 290px;
     }
   }
 
@@ -420,6 +582,11 @@ main {
     display: flex;
     flex-direction: column;
     width: 601px;
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      max-width: 420px;
+    }
+
     h2 {
       color: map-get($neutral-colors, d-grey);
     }
@@ -446,6 +613,10 @@ main {
   align-items: center;
   height: 390px;
 
+  @media (max-width: map-get($breakpoints, lg)) {
+    height: 290px;
+  }
+
   &__image {
     width: 326px;
     height: 326px;
@@ -454,6 +625,12 @@ main {
     object-position: center;
     border-radius: 2%;
     box-shadow: 0 16px 16px #abbed166;
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      width: 200px;
+      height: 200px;
+      margin-right: 44px;
+    }
   }
 
   &__content {
@@ -468,10 +645,14 @@ main {
       line-height: map-get($body, body2, line-height);
       color: map-get($neutral-colors, grey);
 
-      @media (max-width: 1024px) {
+      @media (max-width: map-get($breakpoints, xl)) {
         max-width: 524px;
         font-size: map-get($body, body3, size);
         line-height: map-get($body, body3, line-height);
+      }
+
+      @media (max-width: map-get($breakpoints, lg)) {
+        max-width: 480px;
       }
     }
 
@@ -494,7 +675,7 @@ main {
     gap: 29px;
     margin-right: 32px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       gap: 21px;
       img {
         width: 34px;
@@ -521,11 +702,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 506px;
-
-  @media (max-width: 1024px) {
-    height: 912px;
-  }
+  object-fit: cover;
+  padding-bottom: 32px;
 
   &__intro {
     text-align: center;
@@ -551,7 +729,7 @@ main {
     margin-top: 16px;
     gap: 24px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       row-gap: 126px;
       column-gap: 36px;
     }
@@ -562,6 +740,12 @@ main {
     display: flex;
     justify-content: center;
     text-align: center;
+
+    img {
+      @media (max-width: map-get($breakpoints, lg)) {
+        width: 332px;
+      }
+    }
   }
 
   &__card {
@@ -570,6 +754,9 @@ main {
     padding: 16px;
     box-shadow: 0 16px 16px #abbed166;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: 100%;
     transform: translateY(-50%);
 
@@ -577,12 +764,17 @@ main {
       width: 285px;
       font-weight: 600;
       color: map-get($neutral-colors, grey);
+
+      @media (max-width: map-get($breakpoints, lg)) {
+        width: 240px;
+      }
     }
   }
 
   &__navigate {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 8px;
     margin-top: 16px;
     cursor: pointer;
@@ -590,6 +782,11 @@ main {
       width: 100px;
       font-weight: 600;
       color: #4caf4f;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      width: 164px;
+      height: 30px;
     }
   }
 }
@@ -607,6 +804,10 @@ main {
     h1 {
       width: 887px;
       color: map-get($neutral-colors, black);
+
+      @media (max-width: map-get($breakpoints, lg)) {
+        width: 600px;
+      }
     }
   }
 
@@ -628,7 +829,13 @@ main {
     justify-content: center;
     position: relative;
     height: 328px;
-    display: flex;
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      flex-direction: column;
+      height: max-content;
+      align-items: center;
+      padding: 48px 0;
+    }
   }
 
   &__info {
@@ -640,8 +847,12 @@ main {
     width: 350px;
     margin-right: 125px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       margin-right: 0;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      align-items: center;
     }
   }
 
@@ -655,6 +866,10 @@ main {
       color: white;
       font-size: map-get($body, body3, size);
       line-height: map-get($body, body3, line-height);
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      align-items: center;
     }
   }
 
@@ -684,8 +899,12 @@ main {
     align-items: center;
     gap: 30px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       gap: 21px;
+    }
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      margin-top: 32px;
     }
   }
 
@@ -726,7 +945,7 @@ main {
     width: 255px;
     height: 40px;
     padding-right: 8px;
-    @media (max-width: 1024px) {
+    @media (max-width: map-get($breakpoints, xl)) {
       width: 158px;
     }
     input {

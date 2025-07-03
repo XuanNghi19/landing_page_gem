@@ -53,3 +53,12 @@ $body: (
   body3: (size: 0.875rem, line-height: 1.25rem),
   body4: (size: 0.75rem, line-height: 1rem),
 );
+
+$breakpoints: (
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 820px,
+  xl: 1024px,
+  xxl: 1440px
+);

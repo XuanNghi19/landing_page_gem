@@ -68,4 +68,17 @@ class Hero {
 
 document.addEventListener("DOMContentLoaded", () => {
   new Hero();
+
+  const menuNav = document.querySelector('.menu__nav')
+  const exitsMenu = document.querySelector(".menu__exits");
+  exitsMenu.addEventListener("click", () => {
+    menuNav.classList.remove("menu__open");
+    menuNav.classList.add("menu__close");
+  });
+
+  const menuOpens = document.querySelector(".menu__opens");
+  menuOpens.addEventListener("click", () => {
+    menuNav.classList.remove("menu__close");
+    menuNav.classList.add("menu__open");
+  });
 });

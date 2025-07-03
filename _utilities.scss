@@ -1,11 +1,23 @@
 @import "./variables.scss";
 
 .btn {
-  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
   padding: 0.625rem 1.25rem;
   margin-right: 14px;
   border: none;
   border-radius: 5%;
+  cursor: pointer;
+
+  white-space: nowrap;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  direction: ltr;
+  unicode-bidi: normal;
+  transform: none;
 }
 
 .btn--ghost {
